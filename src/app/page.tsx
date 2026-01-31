@@ -1,5 +1,6 @@
 import BrandDivider from "@/components/home/BrandDivider";
 import BrandLogos from "@/components/home/BrandLogos";
+import CollectionHero from "@/components/home/CollectionHero";
 import HeroBanner from "@/components/home/HeroBanner";
 import Newsletter from "@/components/home/NewsletterSection";
 import ReviewSection from "@/components/home/ReviewSection";
@@ -10,6 +11,9 @@ export default function Home() {
     <main className="bg-white dark:bg-black">
       {/* Carousel Banner Section */}
       <HeroBanner />
+
+      {/* Collection Hero Section */}
+      <CollectionHero />
 
       {/* Maintenance Bar Section */}
       <MaintenanceBar />
