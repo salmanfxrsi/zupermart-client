@@ -7,14 +7,14 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css/bundle";
 
 export default function HeroBanner() {
-  const slides = ["/image1.jpeg", "/image1.jpg.webp", "/image2.jpeg"];
+  const slides = ["/heroImage1.jpeg", "/heroImage2.jpeg"];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden bg-white dark:bg-black">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
         className="h-full w-full"
       >
@@ -28,37 +28,42 @@ export default function HeroBanner() {
                 priority
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+              <div className="absolute inset-0 bg-black/30" />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Center Content */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
-        {/* LOGO */}
-        <Image
-          src="/logo.jpg"
-          alt="Zuper Mart Logo"
-          width={120}
-          height={120}
-          className="mb-6 object-contain"
-        />
-
-        {/* Shop Now */}
-        <button className="group relative overflow-hidden text-sm md:text-base tracking-[0.3em] uppercase border border-white/40 px-10 py-3 backdrop-blur-md bg-white/10 transition-all duration-500">
-          <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
-            Shop Now
+      {/* Content Overlay */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center text-white">
+        <h1 className="mb-4 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase">
+          New Season <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+            Arrivals
           </span>
-          <span className="absolute inset-0 translate-y-full bg-white transition-transform duration-500 group-hover:translate-y-0" />
-        </button>
+        </h1>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs tracking-widest uppercase opacity-80">
-            Scroll
+        <p className="mb-8 max-w-lg text-sm md:text-lg text-gray-200 font-light tracking-wide">
+          Discover our latest collection featuring premium quality and modern
+          designs.
+        </p>
+
+        {/* Button */}
+        <div className="flex w-full max-w-lg flex-col items-stretch justify-center sm:flex-row">
+          <button className="group relative overflow-hidden border border-white bg-transparent px-12 py-4 text-xs tracking-[0.2em] uppercase text-white transition-all duration-500">
+            <span className="relative z-10 transition-colors duration-500 group-hover:text-black">
+              Shop Now
+            </span>
+            <span className="absolute inset-0 translate-y-full bg-white transition-transform duration-500 group-hover:translate-y-0" />
+          </button>
+        </div>
+
+        {/* Minimalist Scroll Indicator */}
+        <div className="absolute bottom-10 flex flex-col items-center gap-4">
+          <span className="text-[10px] tracking-[0.4em] uppercase opacity-60">
+            Discover
           </span>
-          <div className="h-6 w-px bg-white/60" />
+          <div className="h-10 w-px bg-gradient-to-b from-white to-transparent" />
         </div>
       </div>
     </section>
