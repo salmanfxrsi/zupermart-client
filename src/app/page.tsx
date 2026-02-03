@@ -12,7 +12,6 @@ export default function Home() {
       {/* Carousel Banner Section */}
       <HeroBanner />
 
-
       {/* Brand Logos Section */}
       <BrandLogos />
 
