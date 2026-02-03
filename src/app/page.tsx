@@ -12,14 +12,15 @@ export default function Home() {
       {/* Carousel Banner Section */}
       <HeroBanner />
 
+
+      {/* Brand Logos Section */}
+      <BrandLogos />
+
       {/* Collection Hero Section */}
       <CollectionHero />
 
       {/* Maintenance Bar Section */}
       <MaintenanceBar />
-
-      {/* Brand Logos Section */}
-      <BrandLogos />
 
       {/* Review Section */}
       <ReviewSection />
