@@ -8,21 +8,21 @@ export default function SeasonalCollections() {
     {
       title: "Winter Collection",
       subtitle: "Season of Elegance",
-      image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=2022",
+      image:
+        "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=2022",
       link: "/winter-collection",
     },
     {
       title: "Summer Collection",
       subtitle: "Golden Sun Vibes",
-      image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070",
+      image:
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070",
       link: "/summer-collection",
     },
   ];
 
   return (
-    // Added py-12 px-4 to create the outer margin/padding
-    <section className="w-full bg-slate-50 dark:bg-zinc-950 py-12 px-4 md:px-8 lg:px-16">
-      {/* Gap-6 creates space between the cards */}
+    <section className="w-full dark:bg-black py-12 px-4 md:px-8 lg:px-16">
       <div className="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto">
         {collections.map((item, index) => (
           <div
@@ -57,9 +57,7 @@ export default function SeasonalCollections() {
                   onClick={() => (window.location.href = item.link)}
                   className="group/btn relative overflow-hidden rounded-full border border-white/40 bg-white/10 backdrop-blur-sm px-10 py-4 text-[10px] font-bold tracking-[0.3em] uppercase text-white transition-all duration-300 hover:bg-white hover:text-black"
                 >
-                  <span className="relative z-10">
-                    See Collection
-                  </span>
+                  <span className="relative z-10">See Collection</span>
                 </button>
               </div>
             </div>
