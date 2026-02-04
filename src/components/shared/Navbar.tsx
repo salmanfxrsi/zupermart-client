@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import Sidebar from "./Sidebar";
-import { User, Heart, ShoppingBag } from "lucide-react";
+import { Heart, ShoppingBag, MessageCircle } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/8801715820393", "_blank");
+  };
 
   return (
     <>
@@ -41,12 +45,18 @@ export default function Navbar() {
 
           {/* Right Icons */}
           <div className="flex items-center gap-2 md:gap-4">
-            {/* Profile */}
+            {/* --- Whatsapp Button --- */}
             <button
-              aria-label="Profile"
-              className="rounded-full p-2 text-zinc-700 transition hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/10"
+              onClick={handleWhatsAppClick}
+              className="group flex items-center gap-2 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1.5 text-green-700 transition-all hover:bg-green-500 hover:text-white dark:border-green-400/20 dark:bg-green-400/10 dark:text-green-400 dark:hover:bg-green-400 dark:hover:text-black"
             >
-              <User size={18} />
+              <MessageCircle
+                size={16}
+                className="transition-transform group-hover:rotate-12"
+              />
+              <span className="hidden text-[11px] font-bold uppercase tracking-wider md:block">
+                Message Us
+              </span>
             </button>
 
             {/* Wishlist */}
